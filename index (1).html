@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Himanshu Yadav | Portfolio</title>
+  <style>
+    :root {
+      --bg: #0e0e10;
+      --text: #fff;
+      --accent: #00bcd4;
+      --card: #1b1b1f;
+    }
+    [data-theme="light"] {
+      --bg: #f2f2f2;
+      --text: #111;
+      --accent: #007bff;
+      --card: #fff;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      scroll-behavior: smooth;
+      transition: background 0.5s, color 0.5s;
+    }
+    header {
+      background: var(--card);
+      padding: 15px 20px;
+      position: sticky;
+      top: 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 10;
+      transition: background 0.5s;
+    }
+    header h1 { font-size: 1.4em; color: var(--accent); }
+    nav a {
+      color: var(--text);
+      text-decoration: none;
+      margin-left: 15px;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+    nav a:hover { color: var(--accent); }
+    .theme-toggle {
+      background: none;
+      border: 2px solid var(--accent);
+      color: var(--accent);
+      border-radius: 50%;
+      width: 35px;
+      height: 35px;
+      font-size: 18px;
+      cursor: pointer;
+      transition: 0.4s;
+    }
+    .theme-toggle:hover { background: var(--accent); color: #fff; }
+    .hero {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 60px 20px;
+      background: linear-gradient(145deg, var(--card), var(--bg));
+    }
+    .hero img {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid var(--accent);
+      margin-bottom: 20px;
+      transition: transform 0.4s;
+    }
+    .hero img:hover { transform: scale(1.05); }
+    .hero h2 { font-size: 1.8em; color: var(--accent); }
+    .hero p { color: var(--text); opacity: 0.8; max-width: 500px; margin: 10px 0 20px; }
+    .hero button {
+      background: var(--accent);
+      color: #fff;
+      border: none;
+      padding: 12px 25px;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .hero button:hover { background: #0097a7; }
+    section {
+      padding: 60px 20px;
+      text-align: center;
+      max-width: 900px;
+      margin: auto;
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    }
+    section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    h2 {
+      font-size: 1.8em;
+      margin-bottom: 15px;
+      color: var(--accent);
+    }
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .project {
+      background: var(--card);
+      padding: 20px;
+      border-radius: 10px;
+      transition: transform 0.3s, background 0.3s;
+    }
+    .project:hover { transform: translateY(-5px); background: rgba(0,0,0,0.2); }
+    .project h3 { color: var(--accent); margin-bottom: 10px; }
+    .project p { opacity: 0.8; }
+    .skills { text-align: left; max-width: 600px; margin: 30px auto; }
+    .skill { margin-bottom: 15px; }
+    .skill span { display: block; margin-bottom: 5px; font-weight: 500; }
+    .bar { background: #333; border-radius: 20px; overflow: hidden; }
+    .bar-fill { background: var(--accent); height: 12px; width: 0; border-radius: 20px; transition: width 2s ease; }
+    .contact a { color: var(--accent); text-decoration: none; font-weight: bold; }
+    footer {
+      background: var(--card);
+      text-align: center;
+      padding: 15px;
+      font-size: 0.9em;
+      color: #aaa;
+      margin-top: 40px;
+      transition: background 0.5s;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Himanshu Yadav</h1>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button class="theme-toggle" id="themeToggle">☀️</button>
+  </header>
+  <section class="hero">
+    <img src="IMG_20250901_125442_345.jpg" alt="Himanshu Yadav">
+    <div>
+      <h2>Hi, I'm Himanshu 👋</h2>
+      <p>An IT Infrastructure Engineer passionate about networks, systems, and automation.</p>
+      <button onclick="window.location='#projects'">View My Work</button>
+    </div>
+  </section>
+</body>
+</html>
